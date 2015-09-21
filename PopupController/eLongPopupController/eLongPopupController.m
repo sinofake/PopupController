@@ -1,0 +1,251 @@
+//
+//  eLongPopupController.m
+//  PopupController
+//
+//  Created by zhucuirong on 15/9/16.
+//  Copyright (c) 2015年 SINOFAKE SINEP. All rights reserved.
+//
+
+#import "eLongPopupController.h"
+#import "eLongPopupDefine.h"
+#import "eLongPopupTableViewCell.h"
+#import "CNPPopupController.h"
+
+static NSString *CellIdentifier = @"CellID";
+
+@interface eLongPopupController ()<UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, CNPPopupControllerDelegate>
+@property (nonatomic, assign) eLongPopupStyle style;
+@property (nonatomic, assign) CGFloat contentHeight;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIPickerView *pickerView;
+@property (nonatomic, strong) eLongPopupTitleView *titleView;
+@property (nonatomic, strong) CNPPopupController *popupController;
+
+
+@end
+
+@implementation eLongPopupController
+
++ (eLongPopupTitleView *)commonPopupTitleView {
+    return [[eLongPopupTitleView alloc] initWithFrame:CGRectMake(0, 0, SS_SCREEN_WIDTH, POPUP_TITLE_VIEW_HEIGHT)];
+}
+
+- (instancetype)initWithStyle:(eLongPopupStyle)style {
+    return [self initWithStyle:style contentHeight:POPUP_CONTENT_HEIGHT];
+}
+
+- (instancetype)initWithStyle:(eLongPopupStyle)style contentHeight:(CGFloat)height {
+    self = [super init];
+    if (self) {
+        self.style = style;
+        self.contentHeight = height;
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup {
+    self.selectedRow = 0;
+    
+    eLongPopupTitleView *titleView = [[eLongPopupTitleView alloc] initWithFrame:CGRectMake(0, 0, SS_SCREEN_WIDTH, POPUP_TITLE_VIEW_HEIGHT)];
+    titleView.delegate = self;
+    self.titleView = titleView;
+    
+    UIView *contentView;
+    CGRect contentFrame = CGRectMake(0, 0, SS_SCREEN_WIDTH, self.contentHeight);
+    if (self.style == eLongPopupStylePicker) {
+        UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:contentFrame];
+        pickerView.backgroundColor = [UIColor clearColor];
+        pickerView.showsSelectionIndicator = YES;
+        pickerView.dataSource = self;
+        pickerView.delegate = self;
+        contentView = pickerView;
+        self.pickerView = pickerView;
+    }
+    else if (self.style == eLongPopupStyleTable) {
+        self.titleView.rightButton.hidden = YES;
+        
+        UITableView *tableView = [[UITableView alloc] initWithFrame:contentFrame];
+        tableView.backgroundColor = [UIColor clearColor];
+        [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+        [tableView registerClass:[eLongPopupTableViewCell class] forCellReuseIdentifier:CellIdentifier];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        contentView = tableView;
+        tableView.tableFooterView = [UIView new];
+        self.tableView = tableView;
+    }
+    
+    self.popupController = [[CNPPopupController alloc] initWithContents:@[self.titleView, contentView]];
+    [self configurePopupTheme];
+}
+
+- (void)configurePopupTheme {
+    CNPPopupTheme *theme = self.popupController.theme;
+    theme.backgroundColor = [UIColor colorWithRed:248/255.f green:248/255.f blue:248/255.f alpha:1];
+    theme.contentVerticalPadding = 0;
+    theme.popupContentInsets = UIEdgeInsetsZero;
+    theme.popupStyle = CNPPopupStyleActionSheet;
+    self.popupController.delegate = self;
+}
+
+- (instancetype)initWithContentView:(UIView *)contentView {
+    self = [super init];
+    if (self) {
+        self.titleView = [eLongPopupController commonPopupTitleView];
+        self.titleView.delegate = self;
+        
+        self.popupController = [[CNPPopupController alloc] initWithContents:@[self.titleView, contentView]];
+        [self configurePopupTheme];
+    }
+    return self;
+}
+
+- (instancetype)initWithContents:(NSArray *)contents {
+    self = [super init];
+    if (self) {
+        self.popupController = [[CNPPopupController alloc] initWithContents:contents];
+        [self configurePopupTheme];
+    }
+    return self;
+}
+
+- (void)setContents:(NSArray *)contents {
+    self.popupController = [[CNPPopupController alloc] initWithContents:contents];
+    [self configurePopupTheme];
+}
+
+#pragma mark - Presentation & Dismiss
+- (void)presentPopupControllerAnimated:(BOOL)flag {
+    [self.popupController presentPopupControllerAnimated:flag];
+}
+
+- (void)presentPopupControllerInView:(UIView *)holderView animated:(BOOL)flag {
+    [self.popupController presentPopupControllerInView:holderView animated:flag];
+}
+
+- (void)dismissPopupControllerAnimated:(BOOL)flag {
+    [self.popupController dismissPopupControllerAnimated:flag];
+}
+
+#pragma mark - CNPPopupControllerDelegate
+- (void)popupControllerWillPresent:(CNPPopupController *)controller {
+    if ([self.presentDelegate respondsToSelector:@selector(popupControllerWillPresent:)]) {
+        [self.presentDelegate popupControllerWillPresent:self];
+        return;
+    }
+    
+    if (self.style == eLongPopupStylePicker) {
+        [self.pickerView reloadAllComponents];
+        [self.pickerView selectRow:_selectedRow inComponent:0 animated:NO];
+    }
+    else {
+        [self.tableView reloadData];
+        if (self.selectedRow < [self.dataSource numberOfRowInELongPopupController:self]) {
+            [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+        }
+    }
+}
+
+- (void)popupControllerDidPresent:(CNPPopupController *)controller {
+    if ([self.presentDelegate respondsToSelector:@selector(popupControllerDidPresent:)]) {
+        [self.presentDelegate popupControllerDidPresent:self];
+    }
+}
+
+- (void)popupControllerWillDismiss:(CNPPopupController *)controller {
+    if ([self.presentDelegate respondsToSelector:@selector(popupControllerWillDismiss:)]) {
+        [self.presentDelegate popupControllerWillDismiss:self];
+    }
+}
+
+- (void)popupControllerDidDismiss:(CNPPopupController *)controller {
+    if ([self.presentDelegate respondsToSelector:@selector(popupControllerDidDismiss:)]) {
+        [self.presentDelegate popupControllerDidDismiss:self];
+    }
+}
+
+#pragma mark - eLongPopupTitleViewDelegate
+- (void)eLongPopupTitleView:(eLongPopupTitleView *)titleView actionWithType:(eLongPopupTitleViewActionType)type {
+    if ([self.delegate respondsToSelector:@selector(eLongPopupController:actionWithType:)]) {
+        if (type == eLongPopupTitleViewActionTypeLeftButtonClick) {
+            [self.delegate eLongPopupController:self actionWithType:eLongPopupActionTypeLeftButtonClick];
+        }
+        else {
+            [self.delegate eLongPopupController:self actionWithType:eLongPopupActionTypeRightButtonClick];
+        }
+    }
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataSource numberOfRowInELongPopupController:self];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    eLongPopupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.nameLabel.text = [self.dataSource eLongPopupController:self titleForRow:indexPath.row];
+    if (indexPath.row == self.selectedRow) {
+        cell.checked = YES;
+    }
+    else {
+        cell.checked = NO;
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedRow = indexPath.row;
+    [tableView reloadData];
+    if ([self.delegate respondsToSelector:@selector(eLongPopupController:didSelectRow:)]) {
+        [self.delegate eLongPopupController:self didSelectRow:indexPath.row];
+    }
+}
+
+#pragma mark - UIPickerViewDataSource
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [self.dataSource numberOfRowInELongPopupController:self];
+}
+
+#pragma mark - UIPickerViewDelegate
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 36.f;
+}
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *string = [self.dataSource eLongPopupController:self titleForRow:row];
+    return [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f], NSForegroundColorAttributeName: [UIColor colorWithRed:52/255.f green:52/255.f blue:52/255.f alpha:1]}];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    if ([self.delegate respondsToSelector:@selector(eLongPopupController:didSelectRow:)]) {
+        [self.delegate eLongPopupController:self didSelectRow:row];
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - custom accessor
+- (NSInteger)selectedRow {
+    if (self.style == eLongPopupStylePicker) {
+        return _selectedRow = [self.pickerView selectedRowInComponent:0];
+    }
+    else {
+        return _selectedRow;
+    }
+}
+
+- (void)setTitle:(NSString *)title {
+    if (_title != title) {
+        _title = [title copy];
+        self.titleView.titleLabel.text = title;
+    }
+}
+
+@end

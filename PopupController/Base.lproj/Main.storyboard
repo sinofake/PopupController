@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ikk-GE-14h">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNv-bk-08V">
+                                <rect key="frame" x="234" y="203" width="132" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="MkC-1z-aO3"/>
+                                    <constraint firstAttribute="height" constant="40" id="YXN-U2-4g4"/>
+                                </constraints>
+                                <state key="normal" title="Show Picker"/>
+                                <connections>
+                                    <action selector="popupPickerView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ObV-Qc-eiP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aao-wF-uXx">
+                                <rect key="frame" x="225" y="263" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8bb-Go-Pem"/>
+                                    <constraint firstAttribute="width" constant="150" id="mxi-m7-vUG"/>
+                                </constraints>
+                                <state key="normal" title="Show Custom View1"/>
+                                <connections>
+                                    <action selector="popupCustomView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OI9-Kb-LYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-hY-7hN">
+                                <rect key="frame" x="225" y="323" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1e7-ag-tUR"/>
+                                    <constraint firstAttribute="height" constant="40" id="nvd-EK-XwP"/>
+                                </constraints>
+                                <state key="normal" title="Show Custom View2"/>
+                                <connections>
+                                    <action selector="popupCustomView2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N0r-B8-pwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HB-00-mz4">
+                                <rect key="frame" x="234" y="143" width="132" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="07K-J6-scO"/>
+                                    <constraint firstAttribute="width" constant="132" id="Dco-ln-7TI"/>
+                                    <constraint firstAttribute="height" constant="40" id="d8s-Eg-AtT"/>
+                                    <constraint firstAttribute="height" constant="40" id="h2W-zp-wbh"/>
+                                </constraints>
+                                <state key="normal" title="Show Table"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="07K-J6-scO"/>
+                                        <exclude reference="d8s-Eg-AtT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="popupTableView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2vb-4k-L4N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7HB-00-mz4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="79" id="29O-Pv-Swm"/>
+                            <constraint firstItem="Aao-wF-uXx" firstAttribute="centerX" secondItem="7HB-00-mz4" secondAttribute="centerX" id="AdJ-Sc-d7r"/>
+                            <constraint firstItem="YNv-bk-08V" firstAttribute="top" secondItem="7HB-00-mz4" secondAttribute="bottom" constant="20" id="Aju-KG-dLP"/>
+                            <constraint firstItem="Aao-wF-uXx" firstAttribute="top" secondItem="YNv-bk-08V" secondAttribute="bottom" constant="20" id="GM0-Iy-zC4"/>
+                            <constraint firstItem="e6q-hY-7hN" firstAttribute="top" secondItem="Aao-wF-uXx" secondAttribute="bottom" constant="20" id="OQt-Pz-u7e"/>
+                            <constraint firstItem="e6q-hY-7hN" firstAttribute="centerX" secondItem="Aao-wF-uXx" secondAttribute="centerX" id="hqm-Tr-sxc"/>
+                            <constraint firstItem="7HB-00-mz4" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="qWw-A5-0hY"/>
+                            <constraint firstItem="7HB-00-mz4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wUI-Kf-ybH"/>
+                            <constraint firstItem="YNv-bk-08V" firstAttribute="centerX" secondItem="7HB-00-mz4" secondAttribute="centerX" id="yar-km-o4D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qWw-A5-0hY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ItE-3J-0ry"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="343"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Oc-yj-dv9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ikk-GE-14h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4O5-Wy-zPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ix7-tk-AiW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkk-t3-jal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="353"/>
+        </scene>
+    </scenes>
+</document>
