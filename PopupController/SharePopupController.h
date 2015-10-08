@@ -6,8 +6,8 @@
 //  Copyright © 2015年 SINOFAKE SINEP. All rights reserved.
 //
 
-#import "eLongPopupController.h"
+#import "SSPopupController.h"
 
-@interface SharePopupController : eLongPopupController
+@interface SharePopupController : SSPopupController
 
 @end

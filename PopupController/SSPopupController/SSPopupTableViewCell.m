@@ -6,16 +6,16 @@
 //  Copyright (c) 2015年 SINOFAKE SINEP. All rights reserved.
 //
 
-#import "eLongPopupTableViewCell.h"
-#import "eLongPopupDefine.h"
+#import "SSPopupTableViewCell.h"
+#import "SSPopupDefine.h"
 
-@interface eLongPopupTableViewCell ()
+@interface SSPopupTableViewCell ()
 @property (nonatomic, strong) UIView *splitView;
 @property (nonatomic, strong) UIImageView *checkImgView;
 
 @end
 
-@implementation eLongPopupTableViewCell
+@implementation SSPopupTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

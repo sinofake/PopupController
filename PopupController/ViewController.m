@@ -7,16 +7,16 @@
 //
 
 #import "ViewController.h"
-#import "eLongPopupController.h"
-#import "eLongPopupDefine.h"
+#import "SSPopupController.h"
+#import "SSPopupDefine.h"
 #import "SharePopupController.h"
 
-@interface ViewController ()<eLongPopupControllerDataSource, eLongPopupControllerDelegate>
+@interface ViewController ()<SSPopupControllerDataSource, SSPopupControllerDelegate>
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, assign) NSInteger selectedRow;
-@property (nonatomic, strong) eLongPopupController *tablePopupController;
-@property (nonatomic, strong) eLongPopupController *pickerPopupController;
-@property (nonatomic, strong) eLongPopupController *customPopupController1;
+@property (nonatomic, strong) SSPopupController *tablePopupController;
+@property (nonatomic, strong) SSPopupController *pickerPopupController;
+@property (nonatomic, strong) SSPopupController *customPopupController1;
 @property (nonatomic, strong) SharePopupController *customPopupController2;
 
 @end
@@ -38,7 +38,7 @@
                        @"无法不爱着你",
                        @"baby",
                        @"说你也爱我喔～"];
-    self.selectedRow = 0;
+    self.selectedRow = -1;
 }
 
 - (IBAction)popupTableView:(id)sender {
@@ -60,19 +60,19 @@
 }
 
 #pragma mark - eLongPopupControllerDataSource
-- (NSInteger)numberOfRowInELongPopupController:(eLongPopupController *)popupController {
+- (NSInteger)numberOfRowInSSPopupController:(SSPopupController *)popupController {
     return self.dataArray.count;
 }
 
-- (NSString *)eLongPopupController:(eLongPopupController *)popupController titleForRow:(NSInteger)row {
+- (NSString *)SSPopupController:(SSPopupController *)popupController titleForRow:(NSInteger)row {
     return self.dataArray[row];
 }
 
 
 #pragma mark - eLongPopupControllerDelegate
-- (void)eLongPopupController:(eLongPopupController *)popupController actionWithType:(eLongPopupActionType)type {
+- (void)SSPopupController:(SSPopupController *)popupController actionWithType:(SSPopupActionType)type {
     [popupController dismissPopupControllerAnimated:YES];
-    if (type == eLongPopupActionTypeLeftButtonClick) {
+    if (type == SSPopupActionTypeLeftButtonClick) {
         return;
     }
     if (popupController == _pickerPopupController) {
@@ -80,7 +80,7 @@
     }
 }
 
-- (void)eLongPopupController:(eLongPopupController *)popupController didSelectRow:(NSInteger)row {
+- (void)SSPopupController:(SSPopupController *)popupController didSelectRow:(NSInteger)row {
     if (popupController == _tablePopupController) {
         self.selectedRow = row;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -94,9 +94,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (eLongPopupController *)tablePopupController {
+- (SSPopupController *)tablePopupController {
     if (!_tablePopupController) {
-        _tablePopupController = [[eLongPopupController alloc] initWithStyle:eLongPopupStyleTable contentHeight:400.f];
+        _tablePopupController = [[SSPopupController alloc] initWithStyle:SSPopupStyleTable contentHeight:400.f];
         _tablePopupController.title = @"Table Style";
         _tablePopupController.dataSource = self;
         _tablePopupController.delegate = self;
@@ -104,9 +104,9 @@
     return _tablePopupController;
 }
 
-- (eLongPopupController *)pickerPopupController {
+- (SSPopupController *)pickerPopupController {
     if (!_pickerPopupController) {
-        _pickerPopupController = [[eLongPopupController alloc] initWithStyle:eLongPopupStylePicker];
+        _pickerPopupController = [[SSPopupController alloc] initWithStyle:SSPopupStylePicker];
         _pickerPopupController.title = @"Picker Style";
         _pickerPopupController.dataSource = self;
         _pickerPopupController.delegate = self;
@@ -114,14 +114,14 @@
     return _pickerPopupController;
 }
 
-- (eLongPopupController *)customPopupController1 {
+- (SSPopupController *)customPopupController1 {
     if (!_customPopupController1) {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SS_SCREEN_WIDTH, 216.f)];
         label.backgroundColor = [UIColor orangeColor];
         label.text = @"CustomPopupController1";
         label.textAlignment = NSTextAlignmentCenter;
         
-        _customPopupController1 = [[eLongPopupController alloc] initWithContentView:label];
+        _customPopupController1 = [[SSPopupController alloc] initWithContentView:label];
         _customPopupController1.title = @"Custom Popup1";
         _customPopupController1.delegate = self;
     }

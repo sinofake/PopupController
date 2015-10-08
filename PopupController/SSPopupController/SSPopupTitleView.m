@@ -6,16 +6,16 @@
 //  Copyright (c) 2015年 SINOFAKE SINEP. All rights reserved.
 //
 
-#import "eLongPopupTitleView.h"
-#import "eLongPopupDefine.h"
+#import "SSPopupTitleView.h"
+#import "SSPopupDefine.h"
 #import "UIButton+SSEdgeInsets.h"
 
-@interface eLongPopupTitleView ()
+@interface SSPopupTitleView ()
 @property (nonatomic, strong) UIView *splitView;
 
 @end
 
-@implementation eLongPopupTitleView
+@implementation SSPopupTitleView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -66,14 +66,14 @@
 }
 
 - (void)leftButtonAction:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(eLongPopupTitleView:actionWithType:)]) {
-        [self.delegate eLongPopupTitleView:self actionWithType:eLongPopupTitleViewActionTypeLeftButtonClick];
+    if ([self.delegate respondsToSelector:@selector(SSPopupTitleView:actionWithType:)]) {
+        [self.delegate SSPopupTitleView:self actionWithType:SSPopupTitleViewActionTypeLeftButtonClick];
     }
 }
 
 - (void)rightButtonAction:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(eLongPopupTitleView:actionWithType:)]) {
-        [self.delegate eLongPopupTitleView:self actionWithType:eLongPopupTitleViewActionTypeRightButtonClick];
+    if ([self.delegate respondsToSelector:@selector(SSPopupTitleView:actionWithType:)]) {
+        [self.delegate SSPopupTitleView:self actionWithType:SSPopupTitleViewActionTypeRightButtonClick];
     }
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "SharePopupController.h"
-#import "eLongPopupDefine.h"
+#import "SSPopupDefine.h"
 #import "UIButton+SSEdgeInsets.h"
 
 @interface SharePopupController ()

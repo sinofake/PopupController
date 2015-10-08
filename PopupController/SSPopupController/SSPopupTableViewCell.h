@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface eLongPopupTableViewCell : UITableViewCell
+@interface SSPopupTableViewCell : UITableViewCell
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, assign) BOOL checked;
 
