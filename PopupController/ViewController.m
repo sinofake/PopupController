@@ -38,7 +38,7 @@
                        @"无法不爱着你",
                        @"baby",
                        @"说你也爱我喔～"];
-    self.selectedRow = -1;
+    self.selectedRow = 0;
 }
 
 - (IBAction)popupTableView:(id)sender {
