@@ -12,7 +12,7 @@
 @class SSPopupController;
 
 typedef NS_ENUM(NSInteger, SSPopupStyle) {
-    SSPopupStylePicker,//只针对component为1的pickerView
+    SSPopupStylePicker = 1,//只针对component为1的pickerView
     SSPopupStyleTable
 };
 
@@ -64,15 +64,6 @@ typedef NS_ENUM(NSInteger, SSPopupActionType) {
 - (instancetype)initWithStyle:(SSPopupStyle)style contentHeight:(CGFloat)height;
 
 /**
- *  自定义内容视图，上方是SSPopupTitleView
- *
- *  @param contentView 自定义的内容视图
- *
- *  @return <#return value description#>
- */
-- (instancetype)initWithContentView:(UIView *)contentView;
-
-/**
  *  完全自定义
  *
  *  @param contents 从上到下的view数组，无须对view.origin赋值，但须对view.size赋值
@@ -83,11 +74,13 @@ typedef NS_ENUM(NSInteger, SSPopupActionType) {
 
 - (void)setContents:(NSArray *)contents;//子类化时用以设置contents，样式同initWithContents:
 
-@property (nonatomic, copy) NSString *title;
 @property (nonatomic, readonly) SSPopupStyle style;
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) SSPopupTitleView *titleView;
+
 @property (nonatomic, readonly) UITableView *tableView;
 @property (nonatomic, readonly) UIPickerView *pickerView;
-@property (nonatomic, readonly) SSPopupTitleView *titleView;
 
 @property (nonatomic, weak) id<SSPopupControllerDataSource> dataSource;
 @property (nonatomic, weak) id<SSPopupControllerDelegate> delegate;

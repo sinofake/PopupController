@@ -16,8 +16,7 @@
 @property (nonatomic, assign) NSInteger selectedRow;
 @property (nonatomic, strong) SSPopupController *tablePopupController;
 @property (nonatomic, strong) SSPopupController *pickerPopupController;
-@property (nonatomic, strong) SSPopupController *customPopupController1;
-@property (nonatomic, strong) SharePopupController *customPopupController2;
+@property (nonatomic, strong) SSPopupController *customPopupController;
 
 @end
 
@@ -52,11 +51,7 @@
 }
 
 - (IBAction)popupCustomView:(id)sender {
-    [self.customPopupController1 presentPopupControllerAnimated:YES];
-}
-
-- (IBAction)popupCustomView2:(id)sender {
-    [self.customPopupController2 presentPopupControllerAnimated:YES];
+    [self.customPopupController presentPopupControllerAnimated:YES];
 }
 
 #pragma mark - eLongPopupControllerDataSource
@@ -114,27 +109,12 @@
     return _pickerPopupController;
 }
 
-- (SSPopupController *)customPopupController1 {
-    if (!_customPopupController1) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SS_SCREEN_WIDTH, 216.f)];
-        label.backgroundColor = [UIColor orangeColor];
-        label.text = @"CustomPopupController1";
-        label.textAlignment = NSTextAlignmentCenter;
-        
-        _customPopupController1 = [[SSPopupController alloc] initWithContentView:label];
-        _customPopupController1.title = @"Custom Popup1";
-        _customPopupController1.delegate = self;
-    }
-    return _customPopupController1;
-}
-
-- (SharePopupController *)customPopupController2 {
-    if (!_customPopupController2) {
-        _customPopupController2 = [[SharePopupController alloc] init];
+- (SSPopupController *)customPopupController {
+    if (!_customPopupController) {
+        _customPopupController = [[SharePopupController alloc] init];
         //_customPopupController2.delegate = self;
     }
-    return _customPopupController2;
+    return _customPopupController;
 }
-
 
 @end

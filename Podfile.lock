@@ -1,0 +1,10 @@
+PODS:
+  - UIButton-SSEdgeInsets (0.1.2)
+
+DEPENDENCIES:
+  - UIButton-SSEdgeInsets (~> 0.1)
+
+SPEC CHECKSUMS:
+  UIButton-SSEdgeInsets: a183cd4125538ff1eac844c2a23ea1395e7d5514
+
+COCOAPODS: 0.39.0

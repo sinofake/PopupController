@@ -15,13 +15,13 @@ typedef NS_ENUM(NSInteger, SSEdgeInsetsType) {
 
 typedef NS_ENUM(NSInteger, SSMarginType) {
     SSMarginTypeTop         ,
-    SSMarginTypeLeft        ,
     SSMarginTypeBottom      ,
+    SSMarginTypeLeft        ,
     SSMarginTypeRight       ,
-    SSMarginTypeLeftTop     ,
-    SSMarginTypeLeftBottom  ,
-    SSMarginTypeRightTop    ,
-    SSMarginTypeRightBottom
+    SSMarginTypeTopLeft     ,
+    SSMarginTypeTopRight    ,
+    SSMarginTypeBottomLeft  ,
+    SSMarginTypeBottomRight
 };
 
 @interface UIButton (SSEdgeInsets)
@@ -42,6 +42,13 @@ typedef NS_ENUM(NSInteger, SSMarginType) {
  *  @param spacing image 和 title 之间的间隙
  */
 - (void)setImageUpTitleDownWithSpacing:(CGFloat)spacing;
+
+/**
+ *  图片在右，标题在左
+ *
+ *  @param spacing image 和 title 之间的间隙
+ */
+- (void)setImageRightTitleLeftWithSpacing:(CGFloat)spacing;
 
 /**
  *  按钮默认风格：图片在标题左边

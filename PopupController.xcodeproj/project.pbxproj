@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00CB68501BAD1D90008A2D85 /* SharePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CB684F1BAD1D90008A2D85 /* SharePopupController.m */; settings = {ASSET_TAGS = (); }; };
-		00CFB1601BC617F300030DA7 /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB1541BC617F300030DA7 /* CNPPopupController.m */; settings = {ASSET_TAGS = (); }; };
-		00CFB1611BC617F300030DA7 /* SSPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB1561BC617F300030DA7 /* SSPopupController.m */; settings = {ASSET_TAGS = (); }; };
-		00CFB1621BC617F300030DA7 /* SSPopupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB1591BC617F300030DA7 /* SSPopupTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		00CFB1631BC617F300030DA7 /* SSPopupTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB15B1BC617F300030DA7 /* SSPopupTitleView.m */; settings = {ASSET_TAGS = (); }; };
-		00CFB1641BC617F300030DA7 /* SSPopupController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00CFB15C1BC617F300030DA7 /* SSPopupController.bundle */; settings = {ASSET_TAGS = (); }; };
-		00CFB1651BC617F300030DA7 /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB15F1BC617F300030DA7 /* UIButton+SSEdgeInsets.m */; settings = {ASSET_TAGS = (); }; };
+		00CB68501BAD1D90008A2D85 /* SharePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CB684F1BAD1D90008A2D85 /* SharePopupController.m */; };
+		00CFB1601BC617F300030DA7 /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB1541BC617F300030DA7 /* CNPPopupController.m */; };
+		00CFB1611BC617F300030DA7 /* SSPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB1561BC617F300030DA7 /* SSPopupController.m */; };
+		00CFB1631BC617F300030DA7 /* SSPopupTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CFB15B1BC617F300030DA7 /* SSPopupTitleView.m */; };
 		00DC241E1BA9473F00A39A73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC241D1BA9473F00A39A73 /* main.m */; };
 		00DC24211BA9473F00A39A73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC24201BA9473F00A39A73 /* AppDelegate.m */; };
 		00DC24241BA9473F00A39A73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC24231BA9473F00A39A73 /* ViewController.m */; };
@@ -21,6 +18,7 @@
 		00DC24291BA9473F00A39A73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DC24281BA9473F00A39A73 /* Images.xcassets */; };
 		00DC242C1BA9473F00A39A73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DC242A1BA9473F00A39A73 /* LaunchScreen.xib */; };
 		00DC24381BA9473F00A39A73 /* PopupControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC24371BA9473F00A39A73 /* PopupControllerTests.m */; };
+		3EE0CB21FF650F00C78F2913 /* libPods-PopupController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1804263F4B4DBD852EA358 /* libPods-PopupController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +38,8 @@
 		00CFB1541BC617F300030DA7 /* CNPPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPPopupController.m; sourceTree = "<group>"; };
 		00CFB1551BC617F300030DA7 /* SSPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopupController.h; sourceTree = "<group>"; };
 		00CFB1561BC617F300030DA7 /* SSPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopupController.m; sourceTree = "<group>"; };
-		00CFB1581BC617F300030DA7 /* SSPopupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopupTableViewCell.h; sourceTree = "<group>"; };
-		00CFB1591BC617F300030DA7 /* SSPopupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopupTableViewCell.m; sourceTree = "<group>"; };
 		00CFB15A1BC617F300030DA7 /* SSPopupTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopupTitleView.h; sourceTree = "<group>"; };
 		00CFB15B1BC617F300030DA7 /* SSPopupTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopupTitleView.m; sourceTree = "<group>"; };
-		00CFB15C1BC617F300030DA7 /* SSPopupController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSPopupController.bundle; sourceTree = "<group>"; };
-		00CFB15E1BC617F300030DA7 /* UIButton+SSEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SSEdgeInsets.h"; sourceTree = "<group>"; };
-		00CFB15F1BC617F300030DA7 /* UIButton+SSEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SSEdgeInsets.m"; sourceTree = "<group>"; };
 		00CFB1661BC61F7700030DA7 /* SSPopupDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopupDefine.h; sourceTree = "<group>"; };
 		00DC24181BA9473F00A39A73 /* PopupController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopupController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DC241C1BA9473F00A39A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +54,9 @@
 		00DC24311BA9473F00A39A73 /* PopupControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DC24361BA9473F00A39A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DC24371BA9473F00A39A73 /* PopupControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupControllerTests.m; sourceTree = "<group>"; };
+		0E0C19959F9686F8B9024D57 /* Pods-PopupController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopupController/Pods-PopupController.debug.xcconfig"; sourceTree = "<group>"; };
+		2D1804263F4B4DBD852EA358 /* libPods-PopupController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopupController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B958FA2E8C98C8A6947156 /* Pods-PopupController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupController.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopupController/Pods-PopupController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE0CB21FF650F00C78F2913 /* libPods-PopupController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +85,8 @@
 				00CFB1521BC617F300030DA7 /* CNPPopupController */,
 				00CFB1551BC617F300030DA7 /* SSPopupController.h */,
 				00CFB1561BC617F300030DA7 /* SSPopupController.m */,
-				00CFB1581BC617F300030DA7 /* SSPopupTableViewCell.h */,
-				00CFB1591BC617F300030DA7 /* SSPopupTableViewCell.m */,
 				00CFB15A1BC617F300030DA7 /* SSPopupTitleView.h */,
 				00CFB15B1BC617F300030DA7 /* SSPopupTitleView.m */,
-				00CFB15C1BC617F300030DA7 /* SSPopupController.bundle */,
-				00CFB15D1BC617F300030DA7 /* UIButton+SSEdgeInsets */,
 			);
 			path = SSPopupController;
 			sourceTree = "<group>";
@@ -107,21 +100,14 @@
 			path = CNPPopupController;
 			sourceTree = "<group>";
 		};
-		00CFB15D1BC617F300030DA7 /* UIButton+SSEdgeInsets */ = {
-			isa = PBXGroup;
-			children = (
-				00CFB15E1BC617F300030DA7 /* UIButton+SSEdgeInsets.h */,
-				00CFB15F1BC617F300030DA7 /* UIButton+SSEdgeInsets.m */,
-			);
-			path = "UIButton+SSEdgeInsets";
-			sourceTree = "<group>";
-		};
 		00DC240F1BA9473F00A39A73 = {
 			isa = PBXGroup;
 			children = (
 				00DC241A1BA9473F00A39A73 /* PopupController */,
 				00DC24341BA9473F00A39A73 /* PopupControllerTests */,
 				00DC24191BA9473F00A39A73 /* Products */,
+				58258860EF3B640E446E500E /* Pods */,
+				4C1DBD6265289AB9339AA360 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +164,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4C1DBD6265289AB9339AA360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D1804263F4B4DBD852EA358 /* libPods-PopupController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58258860EF3B640E446E500E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E0C19959F9686F8B9024D57 /* Pods-PopupController.debug.xcconfig */,
+				A1B958FA2E8C98C8A6947156 /* Pods-PopupController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,9 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DC243B1BA9473F00A39A73 /* Build configuration list for PBXNativeTarget "PopupController" */;
 			buildPhases = (
+				519EF6173DC514EA98DA1C0C /* Check Pods Manifest.lock */,
 				00DC24141BA9473F00A39A73 /* Sources */,
 				00DC24151BA9473F00A39A73 /* Frameworks */,
 				00DC24161BA9473F00A39A73 /* Resources */,
+				19AA40EC721E38D1305DB873 /* Embed Pods Frameworks */,
+				F5166662638A5C474068D24E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,7 +266,6 @@
 			files = (
 				00DC24271BA9473F00A39A73 /* Main.storyboard in Resources */,
 				00DC242C1BA9473F00A39A73 /* LaunchScreen.xib in Resources */,
-				00CFB1641BC617F300030DA7 /* SSPopupController.bundle in Resources */,
 				00DC24291BA9473F00A39A73 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +279,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19AA40EC721E38D1305DB873 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopupController/Pods-PopupController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		519EF6173DC514EA98DA1C0C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5166662638A5C474068D24E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopupController/Pods-PopupController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00DC24141BA9473F00A39A73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -283,9 +336,7 @@
 				00CFB1601BC617F300030DA7 /* CNPPopupController.m in Sources */,
 				00CFB1611BC617F300030DA7 /* SSPopupController.m in Sources */,
 				00DC24211BA9473F00A39A73 /* AppDelegate.m in Sources */,
-				00CFB1651BC617F300030DA7 /* UIButton+SSEdgeInsets.m in Sources */,
 				00DC241E1BA9473F00A39A73 /* main.m in Sources */,
-				00CFB1621BC617F300030DA7 /* SSPopupTableViewCell.m in Sources */,
 				00CFB1631BC617F300030DA7 /* SSPopupTitleView.m in Sources */,
 				00CB68501BAD1D90008A2D85 /* SharePopupController.m in Sources */,
 			);
@@ -365,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -411,8 +462,11 @@
 		};
 		00DC243C1BA9473F00A39A73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0C19959F9686F8B9024D57 /* Pods-PopupController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PopupController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,8 +475,11 @@
 		};
 		00DC243D1BA9473F00A39A73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B958FA2E8C98C8A6947156 /* Pods-PopupController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PopupController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

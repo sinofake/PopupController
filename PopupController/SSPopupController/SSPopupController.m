@@ -8,7 +8,6 @@
 
 #import "SSPopupController.h"
 #import "SSPopupDefine.h"
-#import "SSPopupTableViewCell.h"
 #import "CNPPopupController.h"
 
 static NSString *CellIdentifier = @"CellID";
@@ -18,7 +17,6 @@ static NSString *CellIdentifier = @"CellID";
 @property (nonatomic, assign) CGFloat contentHeight;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIPickerView *pickerView;
-@property (nonatomic, strong) SSPopupTitleView *titleView;
 @property (nonatomic, strong) CNPPopupController *popupController;
 
 
@@ -63,18 +61,17 @@ static NSString *CellIdentifier = @"CellID";
         self.pickerView = pickerView;
     }
     else if (self.style == SSPopupStyleTable) {
+        self.titleView.leftButton.hidden = YES;
         self.titleView.rightButton.hidden = YES;
         
         UITableView *tableView = [[UITableView alloc] initWithFrame:contentFrame];
         tableView.backgroundColor = [UIColor clearColor];
         [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-        [tableView registerClass:[SSPopupTableViewCell class] forCellReuseIdentifier:CellIdentifier];
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.dataSource = self;
         tableView.delegate = self;
-        contentView = tableView;
         tableView.tableFooterView = [UIView new];
         self.tableView = tableView;
+        contentView = tableView;
     }
     
     self.popupController = [[CNPPopupController alloc] initWithContents:@[self.titleView, contentView]];
@@ -133,16 +130,18 @@ static NSString *CellIdentifier = @"CellID";
 - (void)popupControllerWillPresent:(CNPPopupController *)controller {
     if ([self.presentDelegate respondsToSelector:@selector(popupControllerWillPresent:)]) {
         [self.presentDelegate popupControllerWillPresent:self];
-        return;
     }
     
     if (self.style == SSPopupStylePicker) {
         [self.pickerView reloadAllComponents];
-        [self.pickerView selectRow:_selectedRow inComponent:0 animated:NO];
+        //因为picker特殊，这里得直接访问成员
+        if (0 <= _selectedRow && _selectedRow < [self.dataSource numberOfRowInSSPopupController:self]) {
+            [self.pickerView selectRow:_selectedRow inComponent:0 animated:NO];
+        }
     }
-    else {
+    else if (self.style == SSPopupStyleTable) {
         [self.tableView reloadData];
-        if (self.selectedRow >= 0 && self.selectedRow < [self.dataSource numberOfRowInSSPopupController:self]) {
+        if (0 <= self.selectedRow && self.selectedRow < [self.dataSource numberOfRowInSSPopupController:self]) {
             [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
         }
     }
@@ -184,14 +183,14 @@ static NSString *CellIdentifier = @"CellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SSPopupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.nameLabel.text = [self.dataSource SSPopupController:self titleForRow:indexPath.row];
+    cell.textLabel.text = [self.dataSource SSPopupController:self titleForRow:indexPath.row];
     if (indexPath.row == self.selectedRow) {
-        cell.checked = YES;
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else {
-        cell.checked = NO;
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     return cell;
 }
@@ -247,5 +246,6 @@ static NSString *CellIdentifier = @"CellID";
         self.titleView.titleLabel.text = title;
     }
 }
+
 
 @end

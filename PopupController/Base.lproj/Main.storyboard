@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ikk-GE-14h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ikk-GE-14h">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -34,20 +34,9 @@
                                     <constraint firstAttribute="height" constant="40" id="8bb-Go-Pem"/>
                                     <constraint firstAttribute="width" constant="150" id="mxi-m7-vUG"/>
                                 </constraints>
-                                <state key="normal" title="Show Custom View1"/>
+                                <state key="normal" title="Show Custom View"/>
                                 <connections>
                                     <action selector="popupCustomView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OI9-Kb-LYU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6q-hY-7hN">
-                                <rect key="frame" x="225" y="323" width="150" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="1e7-ag-tUR"/>
-                                    <constraint firstAttribute="height" constant="40" id="nvd-EK-XwP"/>
-                                </constraints>
-                                <state key="normal" title="Show Custom View2"/>
-                                <connections>
-                                    <action selector="popupCustomView2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N0r-B8-pwb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HB-00-mz4">
@@ -76,8 +65,6 @@
                             <constraint firstItem="Aao-wF-uXx" firstAttribute="centerX" secondItem="7HB-00-mz4" secondAttribute="centerX" id="AdJ-Sc-d7r"/>
                             <constraint firstItem="YNv-bk-08V" firstAttribute="top" secondItem="7HB-00-mz4" secondAttribute="bottom" constant="20" id="Aju-KG-dLP"/>
                             <constraint firstItem="Aao-wF-uXx" firstAttribute="top" secondItem="YNv-bk-08V" secondAttribute="bottom" constant="20" id="GM0-Iy-zC4"/>
-                            <constraint firstItem="e6q-hY-7hN" firstAttribute="top" secondItem="Aao-wF-uXx" secondAttribute="bottom" constant="20" id="OQt-Pz-u7e"/>
-                            <constraint firstItem="e6q-hY-7hN" firstAttribute="centerX" secondItem="Aao-wF-uXx" secondAttribute="centerX" id="hqm-Tr-sxc"/>
                             <constraint firstItem="7HB-00-mz4" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="qWw-A5-0hY"/>
                             <constraint firstItem="7HB-00-mz4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wUI-Kf-ybH"/>
                             <constraint firstItem="YNv-bk-08V" firstAttribute="centerX" secondItem="7HB-00-mz4" secondAttribute="centerX" id="yar-km-o4D"/>

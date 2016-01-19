@@ -20,7 +20,4 @@
 #define POPUP_TITLE_VIEW_BUTTON_PADDING 14.f
 
 
-#define SS_BundleImageWithName(name) [UIImage imageWithContentsOfFile:[[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"SSPopupController.bundle"] stringByAppendingPathComponent:name]]
-
-
 #endif

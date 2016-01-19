@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26A8AC72DF40C2AB248AFFCE1D0E6C8D /* Pods-PopupController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5B2221E835C5F3284F25E3246E628F /* Pods-PopupController-dummy.m */; };
+		3F0E574BE31E05E08C3D16CD1DE04FBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		68460C6F00BA631E4F9FE48F792511C8 /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D98AA52CC8758393624BAA4E39E717 /* UIButton+SSEdgeInsets.m */; };
+		BEBB9B83A6EA204EBE6E3AD4058EF533 /* UIButton-SSEdgeInsets-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBD78E0A9C036C00B97AA0AF5453442 /* UIButton-SSEdgeInsets-dummy.m */; };
+		C88EC026CC866D9A682CBD5048B5E988 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E2077A569B3F74AA9B31722CFE0CB97D /* UIButton+SSEdgeInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E00028E284CA12964C91BAEBD29EA70 /* UIButton+SSEdgeInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4605FED980D7C303A9FB26C15BB91F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F86152A09F692B67DD9B3DAA9743940;
+			remoteInfo = "UIButton-SSEdgeInsets";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05393EF6533F7FD657A5205D75E166DA /* Pods-PopupController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopupController.debug.xcconfig"; sourceTree = "<group>"; };
+		0C1D09B2CE66CD61C6321021BB9E126E /* Pods-PopupController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PopupController.release.xcconfig"; sourceTree = "<group>"; };
+		1E00028E284CA12964C91BAEBD29EA70 /* UIButton+SSEdgeInsets.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+SSEdgeInsets.h"; path = "UIButton+EdgeInsets/UIButton+SSEdgeInsets.h"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43D98AA52CC8758393624BAA4E39E717 /* UIButton+SSEdgeInsets.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+SSEdgeInsets.m"; path = "UIButton+EdgeInsets/UIButton+SSEdgeInsets.m"; sourceTree = "<group>"; };
+		4A52CC7FCB74DCAD9BCDE03C6659DA7D /* UIButton-SSEdgeInsets-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton-SSEdgeInsets-prefix.pch"; sourceTree = "<group>"; };
+		8050D7987916CA5C3E68318DDC2441A6 /* libPods-PopupController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PopupController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD4F612C796DDC827D52513B2AA016B /* Pods-PopupController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopupController-resources.sh"; sourceTree = "<group>"; };
+		A24D5EDA3BDCEF71FE363EB315555AC9 /* Pods-PopupController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PopupController-frameworks.sh"; sourceTree = "<group>"; };
+		A7E1613F4442CCC1622DDB85E8A79F46 /* Pods-PopupController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PopupController-acknowledgements.plist"; sourceTree = "<group>"; };
+		B3A36DE2A063B24DE710A6C24F7DCDC2 /* libUIButton-SSEdgeInsets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIButton-SSEdgeInsets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AD57DB61B6C62300BF4C9067EC4F94 /* Pods-PopupController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PopupController-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC5214EFA6B9BCFA3F03C5EB3F0A0BE2 /* UIButton-SSEdgeInsets.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIButton-SSEdgeInsets.xcconfig"; sourceTree = "<group>"; };
+		BE5B2221E835C5F3284F25E3246E628F /* Pods-PopupController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PopupController-dummy.m"; sourceTree = "<group>"; };
+		DFBD78E0A9C036C00B97AA0AF5453442 /* UIButton-SSEdgeInsets-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton-SSEdgeInsets-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A3E680F7B835814EDB51C63D3BC2C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C88EC026CC866D9A682CBD5048B5E988 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA50E75692388C4547FC528C5295D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0E574BE31E05E08C3D16CD1DE04FBA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F81AE34648E612D1069AEE995676CD2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				43FF38DE2CC1B828C9E2FFA4F7D48AA4 /* Pods-PopupController */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		43FF38DE2CC1B828C9E2FFA4F7D48AA4 /* Pods-PopupController */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD57DB61B6C62300BF4C9067EC4F94 /* Pods-PopupController-acknowledgements.markdown */,
+				A7E1613F4442CCC1622DDB85E8A79F46 /* Pods-PopupController-acknowledgements.plist */,
+				BE5B2221E835C5F3284F25E3246E628F /* Pods-PopupController-dummy.m */,
+				A24D5EDA3BDCEF71FE363EB315555AC9 /* Pods-PopupController-frameworks.sh */,
+				9BD4F612C796DDC827D52513B2AA016B /* Pods-PopupController-resources.sh */,
+				05393EF6533F7FD657A5205D75E166DA /* Pods-PopupController.debug.xcconfig */,
+				0C1D09B2CE66CD61C6321021BB9E126E /* Pods-PopupController.release.xcconfig */,
+			);
+			name = "Pods-PopupController";
+			path = "Target Support Files/Pods-PopupController";
+			sourceTree = "<group>";
+		};
+		61C1DD11A58569B01260A85FC72506A4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC5214EFA6B9BCFA3F03C5EB3F0A0BE2 /* UIButton-SSEdgeInsets.xcconfig */,
+				DFBD78E0A9C036C00B97AA0AF5453442 /* UIButton-SSEdgeInsets-dummy.m */,
+				4A52CC7FCB74DCAD9BCDE03C6659DA7D /* UIButton-SSEdgeInsets-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIButton-SSEdgeInsets";
+			sourceTree = "<group>";
+		};
+		757668C1177C39CC46B3617E8A504E01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8050D7987916CA5C3E68318DDC2441A6 /* libPods-PopupController.a */,
+				B3A36DE2A063B24DE710A6C24F7DCDC2 /* libUIButton-SSEdgeInsets.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				7E309733FA3A97104982AA41E5575A81 /* Pods */,
+				757668C1177C39CC46B3617E8A504E01 /* Products */,
+				3F81AE34648E612D1069AEE995676CD2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E309733FA3A97104982AA41E5575A81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F07F669C450080E38B9A41B4FDC53F53 /* UIButton-SSEdgeInsets */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F07F669C450080E38B9A41B4FDC53F53 /* UIButton-SSEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				1E00028E284CA12964C91BAEBD29EA70 /* UIButton+SSEdgeInsets.h */,
+				43D98AA52CC8758393624BAA4E39E717 /* UIButton+SSEdgeInsets.m */,
+				61C1DD11A58569B01260A85FC72506A4 /* Support Files */,
+			);
+			path = "UIButton-SSEdgeInsets";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0132603FCC6605F6DCC453D5BAEB4906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2077A569B3F74AA9B31722CFE0CB97D /* UIButton+SSEdgeInsets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33AFB3934CE52290FD5AFD087489E382 /* Pods-PopupController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36ACC9B6ACD498DB6BB929D990C1A1CD /* Build configuration list for PBXNativeTarget "Pods-PopupController" */;
+			buildPhases = (
+				5C91BB83ECD605CDE039BD2678DD5621 /* Sources */,
+				7A3E680F7B835814EDB51C63D3BC2C73 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23C251340DC98C815DE54B0D53517B92 /* PBXTargetDependency */,
+			);
+			name = "Pods-PopupController";
+			productName = "Pods-PopupController";
+			productReference = 8050D7987916CA5C3E68318DDC2441A6 /* libPods-PopupController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F86152A09F692B67DD9B3DAA9743940 /* UIButton-SSEdgeInsets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD6A6E3E519A6C287100DB65C8041D9 /* Build configuration list for PBXNativeTarget "UIButton-SSEdgeInsets" */;
+			buildPhases = (
+				A34F175A080F1AECC6D4E1E03EF2EEA7 /* Sources */,
+				EEA50E75692388C4547FC528C5295D51 /* Frameworks */,
+				0132603FCC6605F6DCC453D5BAEB4906 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIButton-SSEdgeInsets";
+			productName = "UIButton-SSEdgeInsets";
+			productReference = B3A36DE2A063B24DE710A6C24F7DCDC2 /* libUIButton-SSEdgeInsets.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 757668C1177C39CC46B3617E8A504E01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33AFB3934CE52290FD5AFD087489E382 /* Pods-PopupController */,
+				8F86152A09F692B67DD9B3DAA9743940 /* UIButton-SSEdgeInsets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C91BB83ECD605CDE039BD2678DD5621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A8AC72DF40C2AB248AFFCE1D0E6C8D /* Pods-PopupController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A34F175A080F1AECC6D4E1E03EF2EEA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68460C6F00BA631E4F9FE48F792511C8 /* UIButton+SSEdgeInsets.m in Sources */,
+				BEBB9B83A6EA204EBE6E3AD4058EF533 /* UIButton-SSEdgeInsets-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23C251340DC98C815DE54B0D53517B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIButton-SSEdgeInsets";
+			target = 8F86152A09F692B67DD9B3DAA9743940 /* UIButton-SSEdgeInsets */;
+			targetProxy = D4605FED980D7C303A9FB26C15BB91F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		052A17875CB827423D627183396CEB60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		340C9A6D5865D607F33243D7E1C5A823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05393EF6533F7FD657A5205D75E166DA /* Pods-PopupController.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		57A0BDE736D24D22449B87DFD84EB4DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5214EFA6B9BCFA3F03C5EB3F0A0BE2 /* UIButton-SSEdgeInsets.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIButton-SSEdgeInsets/UIButton-SSEdgeInsets-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		883994789BDA0C524D5CC424D0697EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1D09B2CE66CD61C6321021BB9E126E /* Pods-PopupController.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		902641E0CCA095247992F5C0A2A0760D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5214EFA6B9BCFA3F03C5EB3F0A0BE2 /* UIButton-SSEdgeInsets.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIButton-SSEdgeInsets/UIButton-SSEdgeInsets-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36ACC9B6ACD498DB6BB929D990C1A1CD /* Build configuration list for PBXNativeTarget "Pods-PopupController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340C9A6D5865D607F33243D7E1C5A823 /* Debug */,
+				883994789BDA0C524D5CC424D0697EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD6A6E3E519A6C287100DB65C8041D9 /* Build configuration list for PBXNativeTarget "UIButton-SSEdgeInsets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				902641E0CCA095247992F5C0A2A0760D /* Debug */,
+				57A0BDE736D24D22449B87DFD84EB4DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

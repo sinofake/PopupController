@@ -8,7 +8,7 @@
 
 #import "SharePopupController.h"
 #import "SSPopupDefine.h"
-#import "UIButton+SSEdgeInsets.h"
+#import <UIButton+SSEdgeInsets.h>
 
 @interface SharePopupController ()
 @property (nonatomic, strong) UIView *shareView;
